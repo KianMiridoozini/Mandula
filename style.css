@@ -1,0 +1,31 @@
+/* COLORS */
+:root {
+    /* --almond: #f7cfc5;
+    --light-pink: #f8c6d4;
+    --beige: #f6e7c5;
+    --white: #fefaf9;
+    --almond-D: #753724;
+    --light-pink-D: #7e1d3c;
+    --beige-D: #a64817;
+    --black: #191514; */
+
+
+    --almond: 247, 207, 197;
+    --light-pink: 248, 198, 212;
+    --beige: 246, 231, 197;
+    --white: 254, 250, 249;
+    --almond-D: 117, 55, 39;
+    --light-pink-D: 126, 29, 60;
+    --beige-D: 166, 72, 23;
+    --black: 25, 21, 20;
+}
+
+body {
+    width: 100vw;
+    background-color: rgb(var(--white));
+    /*font-family: 'Roboto', sans-serif; */
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0; 
+}
