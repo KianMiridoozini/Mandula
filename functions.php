@@ -29,7 +29,7 @@ function enqueue_custom_styles() {
     if (is_page('about-us')) {
         wp_enqueue_style('custom-styles', get_template_directory_uri() . '/css/about-us.css');
     }
-    if (is_page('shop')) {
+    if (is_shop()) { // Correct way to check for WooCommerce shop page
         wp_enqueue_style('custom-styles', get_template_directory_uri() . '/css/shop.css');
     }
     if (is_product()) {

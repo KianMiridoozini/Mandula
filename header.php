@@ -105,6 +105,8 @@
     }
 
     .header-nav a {
+        font-family: var(--font-primary);
+        font-weight: var(--font-weight-light);
         color: rgba(var(--almond), 1);
         transition: color 0.3s;
     }

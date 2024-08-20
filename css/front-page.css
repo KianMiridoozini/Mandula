@@ -1,6 +1,10 @@
 
 
 * {box-sizing:border-box}
+h1{
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
+}
 
 /* Slideshow container */
 .slideshow-container {

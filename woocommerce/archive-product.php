@@ -12,7 +12,7 @@ get_header('shop'); ?>
         }
 
         // Example: Displaying WOOF filter shortcode for product filters
-        echo do_shortcode('[woof]'); 
+        echo do_shortcode('[woof sid="generator_66c2110fa30ac" autohide="0" autosubmit="1" is_ajax="1" ajax_redraw="1" start_filtering_btn="0" btn_position="1"]');
         ?>
     </aside>
 
@@ -87,5 +87,6 @@ get_header('shop'); ?>
         do_action('woocommerce_after_main_content'); ?>
     </main>
 </div>
+
 
 <?php get_footer('shop'); ?>

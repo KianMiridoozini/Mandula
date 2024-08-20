@@ -23,19 +23,19 @@ $hero_txt_3 = get_field('hero_section')['hero_txt_3'];
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
     <img class="hero-img" src="<?php echo esc_url($hero_img_1['url'])  ?>" style="width:100%">
-    <div class="hero-text"><?php echo esc_html($hero_txt_1)  ?></div>
+    <h1 class="hero-text"><?php echo esc_html($hero_txt_1)  ?></h1>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
     <img class="hero-img" src="<?php echo esc_url($hero_img_2['url'])  ?>" style="width:100%">
-    <div class="hero-text"><?php echo esc_html($hero_txt_2)  ?></div>
+    <h1 class="hero-text"><?php echo esc_html($hero_txt_2)  ?></h1>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
     <img class="hero-img" src="<?php echo esc_url($hero_img_3['url'])  ?>" style="width:100%">
-    <div class="hero-text"><?php echo esc_html($hero_txt_3)  ?></div>
+    <h1 class="hero-text"><?php echo esc_html($hero_txt_3)  ?></h1>
   </div>
 
   <!-- Next and previous buttons -->
