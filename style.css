@@ -24,7 +24,16 @@
     --light-pink-D: #7e1d3c;
     --beige-D: #a64817;
     --black: #191514; */
-
+    --product-button{
+      background-color: rgb(var(--white));
+      border: 1px solid rgb(var(--black));
+      border-radius: 5px;
+      font-family: var(--font-primary);
+      font-weight: var(--font-weight-bold);
+  
+      text-align: center;
+      padding: 10px 20px; /* Added padding for better button appearance */
+      transition: background-color 0.5s, color 0.5s;}
 
     --almond: 247, 207, 197;
     --light-pink: 248, 198, 212;
@@ -34,14 +43,80 @@
     --light-pink-D: 126, 29, 60;
     --beige-D: 166, 72, 23;
     --black: 25, 21, 20;
+    --green-B : 75, 107, 71;
+}
+html{
+    scroll-behavior: smooth;
 }
 
+  body::-webkit-scrollbar {
+    width: var(--sb-size)
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 5px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 5px;
+    
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }
+  .ps__rail-y {
+    background-color: var(--sb-track-color);
+    border-radius: 2px;
+  }
+  .ps__thumb-y {
+    background-color: var(--sb-thumb-color);
+    border-radius: 2px;
+  }
 body {
-    width: 100vw;
-    background-color: rgb(var(--white));
+    width: 100%;
+    background-color: rgb(var(--almond),0.4) !important;
     /*font-family: 'Roboto', sans-serif; */
     font-size: 100%;
     line-height: 1.5;
     margin: 0;
     padding: 0; 
+    --sb-track-color: rgb(var(--almond));
+    --sb-thumb-color: rgb(var(--almond-D));
+    --sb-size: 5px;
+    color: rgb(var(--black));
 }
+main button{
+    font-family: var(--font-primary) !important;
+    font-weight: var(--font-weight-semibold) !important;
+}
+
+.woocommerce img, .woocommerce-page img {
+    height: 3rem;
+    width: 100%;
+    object-fit: contain; /* Ensure images maintain aspect ratio */
+}
+
+a{
+font-family: var(--font-primary);
+}
+p{
+    font-family: var(--font-secondary) !important;
+    font-weight: var(--font-weight-regular);
+}
+.price{
+    color: #4B6B47 !important;
+    font-weight: var(--font-weight-medium) !important;
+}
+.woocommerce-variation-price{
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: 22px;
+    color: #4B6B47;
+}
+

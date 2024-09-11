@@ -2,7 +2,6 @@
 /**
  * Template Name: Front Page
  */
-
 get_header(); // Include the header
 
 // Retrieve ACF field group for the front page
@@ -50,6 +49,7 @@ $hero_txt_3 = get_field('hero_section')['hero_txt_3'];
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
+
 
 <script>
     let slideIndex = 1;

@@ -83,6 +83,7 @@
         align-items: center;
         padding: 0 20px;
         transition: background-color 0.3s ease;
+        
     }
 
     .header-nav-menu {
@@ -92,6 +93,7 @@
         height: 100%;
         width: 72vw;
         overflow: hidden; /* Ensure the list doesn't overflow */
+        list-style: none;
     }
 
     .header-nav-menu li {
@@ -109,6 +111,7 @@
         font-weight: var(--font-weight-light);
         color: rgba(var(--almond), 1);
         transition: color 0.3s;
+        text-decoration: none;
     }
 
     .header-nav a:hover {

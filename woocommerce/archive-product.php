@@ -2,17 +2,23 @@
 defined('ABSPATH') || exit;
 
 get_header('shop'); ?>
+<section>
+    <div class="shop-img">
+        <img src=""alt="Shop Banner">
+    </div>
+    <div class="shop-text">
+        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, nobis. Non tenetur dolor ducimus sed molestias blanditiis omnis voluptate nostrum architecto eius ut et quaerat dolorum recusandae, incidunt, illum nisi.</h3>
+</section>
 
 <div class="shop-page-container">
     <aside class="shop-sidebar">
-        <?php
-        // Display the WooCommerce sidebar, which should contain your product filters and categories.
-        if (is_active_sidebar('shop-sidebar')) {
-            dynamic_sidebar('shop-sidebar');
-        }
+        <?php 
+        // aws_get_search_form( true ); 
+        
 
-        // Example: Displaying WOOF filter shortcode for product filters
-        echo do_shortcode('[woof sid="generator_66c2110fa30ac" autohide="0" autosubmit="1" is_ajax="1" ajax_redraw="1" start_filtering_btn="0" btn_position="1"]');
+        echo do_shortcode('[annasta_filters preset_id=1]');
+        // echo do_shortcode('[wcapf_form]');
+        
         ?>
     </aside>
 
@@ -90,3 +96,16 @@ get_header('shop'); ?>
 
 
 <?php get_footer('shop'); ?>
+<script>
+    (function($) {
+    $(document).ready(function() {
+        // Disable AJAX on mobile
+        if ($(window).width() < 768) {
+            $(document).on('click', '.annasta-filter', function(e) {
+                e.preventDefault(); // Prevent AJAX on mobile
+                // Optionally, submit the form manually or use the submit button
+            });
+        }
+    });
+})(jQuery);
+</script>
