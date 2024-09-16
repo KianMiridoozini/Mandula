@@ -1,5 +1,8 @@
 <?php
 
+
+
+
  // Add stylesheets
  function custom_styles() {
     wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/style.css' );
@@ -24,6 +27,9 @@ function enqueue_custom_styles() {
     }
     if (is_product()) {
         wp_enqueue_style('custom-styles', get_template_directory_uri() . '/css/product.css'/*, array(), null, 'all'*/);
+    }
+    if (is_cart()) {
+        wp_enqueue_style('custom-styles', get_template_directory_uri() . '/css/cart.css'/*, array(), null, 'all'*/);
     }
     if (is_page('checkout')) {
         wp_enqueue_style('custom-styles', get_template_directory_uri() . '/css/checkout.css');
@@ -50,8 +56,13 @@ function my_theme_widgets_init() {
     ));
 }
 add_action('widgets_init', 'my_theme_widgets_init');
-
-
+/* test what template cart page is reading  */
+add_action( 'wp_footer', function() {
+    if ( is_cart() ) {
+        global $template;
+        echo '<!-- Cart Page Template: ' . basename( $template ) . ' -->';
+    }
+});
 
 // Add remove gutenberg
 function remove_gutenberg() {
@@ -65,6 +76,7 @@ add_action( 'init', 'remove_gutenberg' );
 add_filter( 'show_admin_bar', '__return_false' );
 
 
+
 function my_custom_enqueue_woocommerce_styles() {
     // Enqueue the WooCommerce frontend scripts again
     if (class_exists('WooCommerce')) {
@@ -73,7 +85,13 @@ function my_custom_enqueue_woocommerce_styles() {
 }
 add_action('wp_enqueue_scripts', 'my_custom_enqueue_woocommerce_styles', 20);
 
-
+// Enqueue WooCommerce cart fragments for AJAX cart updates
+function custom_theme_enqueue_woocommerce_cart_fragments() {
+    if (class_exists('WooCommerce')) {
+        wp_enqueue_script('wc-cart-fragments'); // Essential for cart updates via AJAX
+    }
+}
+add_action('wp_enqueue_scripts', 'custom_theme_enqueue_woocommerce_cart_fragments',100);
 
 
 ?>

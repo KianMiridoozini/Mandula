@@ -2,9 +2,10 @@
 defined('ABSPATH') || exit;
 
 get_header('shop'); ?>
+
 <section>
     <div class="shop-img">
-        <img src=""alt="Shop Banner">
+        <img src="" alt="Shop Banner">
     </div>
     <div class="shop-text">
         <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, nobis. Non tenetur dolor ducimus sed molestias blanditiis omnis voluptate nostrum architecto eius ut et quaerat dolorum recusandae, incidunt, illum nisi.</h3>
@@ -13,25 +14,14 @@ get_header('shop'); ?>
 <div class="shop-page-container">
     <aside class="shop-sidebar">
         <?php 
-        // aws_get_search_form( true ); 
-        
-
         echo do_shortcode('[annasta_filters preset_id=1]');
-        // echo do_shortcode('[wcapf_form]');
-        
         ?>
     </aside>
 
     <main class="shop-products">
         <?php
-        /**
-         * Hook: woocommerce_before_main_content.
-         *
-         * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-         * @hooked woocommerce_breadcrumb - 20
-         * @hooked WC_Structured_Data::generate_website_data() - 30
-         */
-        do_action('woocommerce_before_main_content');
+        // This action is responsible for rendering the content wrapper and potentially the breadcrumb
+        do_action('woocommerce_before_main_content'); // Before main content
 
         /**
          * Hook: woocommerce_shop_loop_header.
@@ -85,17 +75,14 @@ get_header('shop'); ?>
             do_action('woocommerce_no_products_found');
         }
 
-        /**
-         * Hook: woocommerce_after_main_content.
-         *
-         * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-         */
-        do_action('woocommerce_after_main_content'); ?>
+        // This action closes the content wrapper, which was opened by woocommerce_before_main_content
+        do_action('woocommerce_after_main_content'); // After main content
+        ?>
     </main>
 </div>
 
-
 <?php get_footer('shop'); ?>
+
 <script>
     (function($) {
     $(document).ready(function() {
