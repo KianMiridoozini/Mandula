@@ -16,11 +16,11 @@ $paragraph_4 = get_field('about_us_paragraph_4');
 ?>
 
 <section>
-    <div class="about-us-hero">
-            <img src="<?php echo esc_url($about_us_img['url']) ?>" alt="About Us Hero Image" style="width:100%">
-            <div class="about-us-hero-text">
-                <h1><?php echo esc_html($title) ?></h1>
-                <h2><?php echo esc_html($headline) ?></h2>
+    <div class="hero">
+            <img class="hero-img"src="<?php echo esc_url($about_us_img['url']) ?>" alt="About Us Hero Image" style="width:100%">
+            <div class="hero-text" >
+                <h1 class="hero-title"><?php echo esc_html($title) ?></h1>
+                <h2 class="hero-headline"><?php echo esc_html($headline) ?></h2>
             </div>
     </div>
 </section>
