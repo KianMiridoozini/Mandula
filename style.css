@@ -242,7 +242,7 @@ body {
 }
 
 
-main button{
+button{
     font-family: var(--font-primary) !important;
     font-weight: var(--font-weight-semibold) !important;
 }

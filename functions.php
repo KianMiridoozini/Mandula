@@ -11,35 +11,50 @@ add_action( 'wp_enqueue_scripts', 'custom_styles' );
 
 // Add custom stylesheets
 function enqueue_custom_styles() {
-        
-    // Check if it's the specific page where you want to apply the styles
+    
+    // Enqueue front-page styles
     if (is_page('homepage')) {
-        wp_enqueue_style('custom-styles', get_template_directory_uri() . '/css/front-page.css');
+        wp_enqueue_style('front-page-styles', get_template_directory_uri() . '/css/front-page.css');
     }
+
+    // Enqueue contact page styles
     if (is_page('contact-us')) {
-        wp_enqueue_style('custom-styles', get_template_directory_uri() . '/css/contact.css');
+        wp_enqueue_style('contact-page-styles', get_template_directory_uri() . '/css/contact.css');
     }
+
+    // Enqueue about us page styles
     if (is_page('about-us')) {
-        wp_enqueue_style('custom-styles', get_template_directory_uri() . '/css/about-us.css');
+        wp_enqueue_style('about-page-styles', get_template_directory_uri() . '/css/about-us.css');
     }
-    if (is_shop()) { // Correct way to check for WooCommerce shop page
-        wp_enqueue_style('custom-styles', get_template_directory_uri() . '/css/shop.css');
+
+    // Enqueue WooCommerce shop page styles
+    if (is_shop()) {
+        wp_enqueue_style('shop-page-styles', get_template_directory_uri() . '/css/shop.css');
     }
+
+    // Enqueue WooCommerce single product page styles
     if (is_product()) {
-        wp_enqueue_style('custom-styles', get_template_directory_uri() . '/css/product.css'/*, array(), null, 'all'*/);
+        wp_enqueue_style('product-page-styles', get_template_directory_uri() . '/css/product.css');
     }
+
+    // Enqueue WooCommerce cart page styles
     if (is_cart()) {
-        wp_enqueue_style('custom-styles', get_template_directory_uri() . '/css/cart.css'/*, array(), null, 'all'*/);
+        wp_enqueue_style('cart-page-styles', get_template_directory_uri() . '/css/cart.css');
     }
+
+    // Enqueue WooCommerce checkout page styles
     if (is_page('checkout')) {
-        wp_enqueue_style('custom-styles', get_template_directory_uri() . '/css/checkout.css');
+        wp_enqueue_style('checkout-page-styles', get_template_directory_uri() . '/css/checkout.css');
     }
+
+    // Enqueue terms, privacy, and copyright page styles
     if (is_page(array('terms-of-service', 'privacy-policy', 'copyrights'))) {
-        wp_enqueue_style('custom-styles', get_template_directory_uri() . '/css/terms.css');
+        wp_enqueue_style('terms-page-styles', get_template_directory_uri() . '/css/terms.css');
     }
     
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
+
 
 // make woocommerce listen to you
 add_action('after_setup_theme', function () {
@@ -93,5 +108,5 @@ function custom_theme_enqueue_woocommerce_cart_fragments() {
 }
 add_action('wp_enqueue_scripts', 'custom_theme_enqueue_woocommerce_cart_fragments',100);
 
-
+ 
 ?>
