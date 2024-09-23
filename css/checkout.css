@@ -1,0 +1,87 @@
+.site-content {
+    margin: 2vw 2vw
+}
+
+a {
+    color: rgb(var(--black));
+    text-decoration: none;
+}
+
+.wc-block-components-sidebar-layout{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.wc-block-cart-items__row{
+
+    border-radius: 10px;
+    padding: 3vw !important;
+}
+.wc-block-components-main{
+    width: 50% !important;
+    padding-right: 0 !important;
+}
+.wc-block-cart-items__row {
+    background-color: rgb(var(--beige)) !important;
+    border: 2px solid rgb(var(--beige-D)) !important;
+    margin-bottom: 2vw;
+}
+.wc-block-cart-items__row img{
+    height: 6rem !important;
+}
+.wc-block-cart-item__remove-link{
+    font-weight: var(--font-weight-semibold) !important;
+    text-decoration: none !important;
+    color: rgb(var(--beige-D)) !important;
+}
+.wc-block-cart-item__remove-link:hover{
+    color: rgb(var(--light-pink-D)) !important;
+}
+.wc-block-components-sidebar{
+    padding:  3vw !important;
+    background-color: rgb(var(--white));
+    border:2px solid rgb(var(--black));
+    border-radius: 10px;
+    height: fit-content;
+    max-height: fit-content;
+    width: 45% !important;
+}
+.wc-block-components-totals-shipping__change-address__link{
+    display:none !important;
+}
+.wc-block-components-button{
+    font-size: 14px;
+    background-color: rgb(var(--green-B));
+    color: rgb(var(--white));
+    border: 1px solid rgb(var(--black));
+    border-radius: 5px;
+    font-family: var(--font-primary);
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px; 
+    transition: background-color 0.5s, color 0.5s;
+}
+.wc-block-components-button:hover{
+    background-color: rgb(var(--black));
+    color: rgb(var(--white));
+}
+.wc-block-cart__submit-container--sticky{
+    background-color: rgb(var(--white)) !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .wc-block-components-main{
+        width: 100% !important;
+    }
+    .wc-block-components-sidebar{
+        width: 100% !important;
+    }
+}
+/* @media screen and (max-width: 900px) {
+    .wc-block-components-main{
+        width: 100% !important;
+    }
+    .wc-block-components-sidebar{
+        width: 100% !important;
+    }
+} */
