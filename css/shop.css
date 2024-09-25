@@ -1,10 +1,15 @@
 /* =======================================================
    General Styles
-   ======================================================= */
-
-
+======================================================= */
 
 /* Headings styling */
+.woocommerce-breadcrumb {
+    font-family: var(--font-primary) !important;
+    font-weight: var(--font-weight-semibold) !important;
+    font-size: calc(0.5rem + 1vw) !important;
+    margin-top: 1rem !important;
+}
+
 h1 {
     font-family: var(--font-primary);
     font-weight: var(--font-weight-semibold);
@@ -20,12 +25,14 @@ h2, h4 {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-input{
+
+input {
     font-family: var(--font-secondary);
     font-weight: var(--font-weight-medium) !important;
     color: rgb(var(--black));
 }
-.awf-filter-title{
+
+.awf-filter-title {
     font-family: var(--font-primary);
     font-weight: var(--font-weight-medium) !important;
     color: rgb(var(--black)) !important;
@@ -41,10 +48,11 @@ h4 {
 
 /* =======================================================
    Rescue Nav Logo
-   ======================================================= */
+======================================================= */
 
 /* Style for WooCommerce images */
-.woocommerce img, .woocommerce-page img {
+.woocommerce img, 
+.woocommerce-page img {
     height: 3rem;
     width: 100%;
     object-fit: contain; /* Ensure images maintain aspect ratio */
@@ -52,7 +60,7 @@ h4 {
 
 /* =======================================================
    Shop Page Layout
-   ======================================================= */
+======================================================= */
 
 /* Shop page container layout */
 .shop-page-container {
@@ -76,13 +84,16 @@ h4 {
     box-shadow: 0 1px 10px rgba(var(--black), 0.5);
     z-index: 1000;
 }
-.awf-top-reset-btn-container{
+
+.awf-top-reset-btn-container {
     text-align: end;
 }
+
 .awf-active-badge {
     display: block !important;
     cursor: auto !important;
 }
+
 .awf-active-badge i {
     display: none !important;
 }
@@ -102,7 +113,7 @@ label {
 
 /* =======================================================
    Product Cards
-   ======================================================= */
+======================================================= */
 
 /* Product grid layout */
 .woocommerce ul.products {
@@ -156,7 +167,6 @@ main .product:hover {
     border-radius: 5px;
     font-family: var(--font-primary);
     font-weight: var(--font-weight-bold);
-
     text-align: center;
     padding: 10px 20px; /* Added padding for better button appearance */
     transition: background-color 0.5s, color 0.5s;
@@ -177,22 +187,24 @@ main .product:hover {
 .woocommerce ul.products li.product a img:hover {
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
+
 .woocommerce ul.products li.product .button {
     font-size: 14px;
     margin-top: 0;
 }
+
 .product span {
     text-align: center;
 }
+
 /* =======================================================
    Filter Buttons and Presets
-   ======================================================= */
+======================================================= */
 
 /* Preset title styling */
 .awf-preset-title {
     font-family: var(--font-primary);
     color: rgb(var(--black)) !important;
-
     text-align: center;
 }
 
@@ -257,52 +269,81 @@ li.awf-filter-container {
     background-color: rgb(var(--black));
     color: rgb(var(--white));
 }
+
 .awf-togglable-preset-close-btn {
     left: 0 !important;
     text-align: left !important;
     margin-bottom: 55px !important;
 }
 
+.awf-preset-wrapper {
+    line-height: normal !important;
+}
+
+.awf-collapse-btn {
+    align-self: center !important;
+}
+
+.noUi-tooltip {
+    font-size: 1.5em !important;
+    border: none !important;
+}
+
 /* =======================================================
    Responsive Styles
-   ======================================================= */
+======================================================= */
 
 /* Tablet styles */
-@media screen and (max-width: 1180px) and (orientation: portrait) {
-    /* Adjust font size for smaller screens */
+@media screen and (max-width: 1180px) and (orientation: portrait), 
+       screen and (max-width: 1024px) {
+    .woocommerce-breadcrumb {
+        font-size: 3em !important;
+    }
+
+    h1 {
+        font-size: calc(2rem + 2vw);
+    }
+
     h4 {
         font-size: 2em !important;
     }
 
-    /* Adjust shop page layout for tablets */
+    .woocommerce-result-count, 
+    .orderby {
+        font-size: 2em !important;
+    }
+
     .shop-page-container {
         flex-direction: column;
         gap: 3vw;
         margin: 3vw;
     }
 
-    /* Adjust sidebar for tablets */
     .shop-sidebar {
         padding: 5%;
-
     }
 
-    /* Adjust product card layout for tablets */
     .woocommerce ul.products {
         gap: 1.5vw;
     }
-    h2{
+
+    h2 {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         padding: 0 0 0.5em 0 !important;
     }
+
     main .product {
         width: 40% !important;
         margin: 0;
         padding: 15px;
         border-radius: 10px;
         box-shadow: 0 1px 10px rgba(var(--light-pink-D), 0.5);
+    }
+
+    main .product:hover {
+        box-shadow: none;
     }
 
     .woocommerce ul.products li.product a h2 {
@@ -313,25 +354,64 @@ li.awf-filter-container {
         font-size: 2em;
     }
 
+    .awf-filter-title {
+        font-size: 2em !important;
+    }
+
+    .awf-filters-container {
+        font-size: calc(1rem + 1vw) !important;
+    }
+
+    .awf-filter-container input[type='radio'] + label {
+        padding: 20px 0 !important;
+    }
+
     .awf-togglable-preset-mode-on .awf-togglable-on-s-preset.awf-left-popup-sidebar-mode {
         width: auto !important;
         left: 0 !important;
     }
-   .product bdi  {
+
+    .product bdi {
         font-size: 1.8em;
     }
 
+    .noUi-tooltip {
+        font-size: 3em !important;
+    }
+
+    .awf-filter-container.awf-product-search-container .awf-filter {
+        height: 80px !important;
+        border: 2px solid rgb(var(--black)) !important;
+        border-radius: 10px !important;
+        font-size: 2em !important;
+    }
+
+    .awf-form-submit-btn {
+        font-size: 2em !important;
+    }
 }
-@media screen and (max-width: 900px){
+
+@media screen and (max-width: 900px) {
+    .woocommerce-breadcrumb {
+        font-size: 2em !important;
+    }
+
+    .woocommerce-result-count, 
+    .orderby {
+        font-size: 1em !important;
+    }
+
     .shop-sidebar {
         padding: 15px;
         background-color: rgba(var(--almond), 0.0);
         border: none;
         box-shadow: none;
     }
+
     h4 {
         font-size: 1.8em !important;
     }
+
     .woocommerce ul.products li.product a h2 {
         font-size: 1.5em !important;
     }
@@ -339,28 +419,67 @@ li.awf-filter-container {
     .woocommerce ul.products li.product .button {
         display: none;
     }
-    .product bdi  {
+
+    .product bdi {
         font-size: 3vw;
     }
 
-    
+    .awf-filter-title {
+        font-size: 1.5em !important;
+    }
+
+    .awf-filters-container {
+        font-size: calc(1rem + 1vw) !important;
+    }
+
+    .awf-filter-container input[type='radio'] + label {
+        padding: 10px 0 !important;
+    }
+
+    .awf-togglable-preset-mode-on .awf-togglable-on-s-preset.awf-left-popup-sidebar-mode {
+        width: auto !important;
+        left: 0 !important;
+    }
+
+    .noUi-tooltip {
+        font-size: 3em !important;
+    }
+
+    .awf-filter-container.awf-product-search-container .awf-filter {
+        height: 50px !important;
+        font-size: 2em !important;
+    }
+
+    .awf-form-submit-btn {
+        font-size: 2em !important;
+    }
+
+    .awf-product-search-autocomplete-container {
+        border: 1.5px solid rgb(var(--black)) !important;
+        border-radius: 5px;
+    }
 }
 
-/* Phone styles */
 @media screen and (max-width: 480px) {
-    /* Adjust font size for phones */
+    .woocommerce-breadcrumb {
+        font-size: 1em !important;
+    }
+
+    .woocommerce-result-count, 
+    .orderby {
+        font-size: 0.8em !important;
+    }
+
     h4 {
         font-size: 1.2em !important;
     }
 
-    /* Adjust shop page layout for phones */
     .shop-page-container {
         flex-direction: column;
         gap: 2vw;
         margin: 2vw;
     }
 
-    /* Adjust sidebar for phones */
     .shop-sidebar {
         padding: 15px;
         background-color: rgba(var(--almond), 0.0);
@@ -368,7 +487,6 @@ li.awf-filter-container {
         box-shadow: none;
     }
 
-    /* Adjust product card layout for phones */
     .woocommerce ul.products {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 2vw;
@@ -388,12 +506,10 @@ li.awf-filter-container {
         text-overflow: ellipsis;
     }
 
-    /* Hide buttons on phones */
     .woocommerce ul.products li.product .button {
         display: none;
     }
 
-    /* Align product prices */
     .product span {
         width: fit-content;
         align-self: center;
@@ -403,12 +519,34 @@ li.awf-filter-container {
         text-align: center;
     }
 
-    /* Adjust price font size */
     .product span bdi {
         font-size: 0.8em;
         display: flex;
         font-weight: 700;
     }
 
-}
+    .awf-filter-title {
+        font-size: 1em !important;
+    }
 
+    .awf-filters-container {
+        font-size: calc(0.8em + 1vw) !important;
+    }
+
+    .awf-filter-container input[type='radio'] + label {
+        padding: 10px 0 !important;
+    }
+
+    .noUi-tooltip {
+        font-size: 2em !important;
+    }
+
+    .awf-filter-container.awf-product-search-container .awf-filter {
+        height: 40px !important;
+        font-size: 1.5em !important;
+    }
+
+    .awf-form-submit-btn {
+        font-size: 1.5em !important;
+    }
+}

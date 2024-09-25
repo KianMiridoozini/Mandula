@@ -36,6 +36,12 @@ function enqueue_custom_styles() {
     if (is_product()) {
         wp_enqueue_style('product-page-styles', get_template_directory_uri() . '/css/product.css');
     }
+    if (is_product_category()) {
+        wp_enqueue_style('product-page-styles', get_template_directory_uri() . '/css/shop.css');
+    }
+    if (is_product_tag()) {
+        wp_enqueue_style('product-page-styles', get_template_directory_uri() . '/css/shop.css');
+    }
 
     // Enqueue WooCommerce cart page styles
     if (is_cart()) {
