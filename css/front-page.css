@@ -75,6 +75,19 @@ h1{
   animation-duration: 1.5s;
 }
 
+.instagram-feed{
+  margin: 0 10vw;
+}
+.sbi_item{
+  border-radius: 10px !important;
+  border: 2px solid rgb(var(--almond-D));
+  border-radius: 10px;
+
+}
+.sbi_item:hover{
+  box-shadow: 0 1px 10px rgba(var(--light-pink-D));
+}
+
 @keyframes fade {
   from {opacity: .7}
   to {opacity: 1}

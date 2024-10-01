@@ -1,7 +1,20 @@
 .site-content {
     margin: 2vw 2vw
 }
-
+form{
+    padding: 2vw;
+    background-color: rgb(var(--white));
+    border-radius: 10px;
+    border: 2px solid rgb(var(--almond-D));
+}
+.wc-block-components-radio-control{
+    border: dashed;
+}
+.wc-block-components-radio-control--highlight-checked label.wc-block-components-radio-control__option--checked-option-highlighted,
+.wc-block-components-radio-control-accordion-option, .wc-block-components-radio-control-accordion-option--checked-option-highlighted
+{
+    box-shadow: none !important;
+}
 a {
     color: rgb(var(--black));
     text-decoration: none;
@@ -69,7 +82,55 @@ a {
     background-color: rgb(var(--white)) !important;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1180px) and (orientation: portrait), 
+       screen and (max-width: 1024px) {
+    h2{
+        font-size: calc(1em + 2vw) !important;
+    }
+    p{
+        font-size: calc(1em + 1vw) !important;
+    }
+    span{
+        font-size: calc(16px + 1vw) !important;
+    }
+    input{
+        min-height: fit-content !important;
+    }
+    /* textarea{
+        height: calc(90px - 1vw) !important;
+        font-size: calc(1em + 1vw) !important;
+    } */
+    /* label{
+        font-size: calc(1em + 1vw) !important;
+    } */
+     /* .wc-block-components-radio-control label{
+        font-size: calc(1em + 1vw) !important;
+    } */
+    /* .is-active{
+        min-height: fit-content !important;
+        height: 100px !important;
+        
+    }
+    .is-active label{
+        font-size: calc(0.5em + 1vw) !important;
+        margin-bottom: 10px !important;
+
+    } */
+    .wc-block-checkout__billing-fields input, 
+    .wc-block-checkout__contact-fields input {
+        height: calc(2em - 1vw) !important;
+        font-size: calc(1em + 1vw) !important;
+    }
+    .wc-block-checkout__billing-fields label, .wc-block-checkout__contact-fields label{
+        font-weight: var(--font-weight-semibold) !important;
+        font-size: calc(1.2em + 1vw) !important;
+    }
+    .wc-blocks-components-select__container{
+        height: calc(90px - 1vw) !important;
+    }
+    .wc-blocks-components-select__container select{
+        font-size: calc(1em + 1vw) !important;
+    }
     .wc-block-components-main{
         width: 100% !important;
     }

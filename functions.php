@@ -18,7 +18,7 @@ function enqueue_custom_styles() {
     }
 
     // Enqueue contact page styles
-    if (is_page('contact-us')) {
+    if (is_page('contact')) {
         wp_enqueue_style('contact-page-styles', get_template_directory_uri() . '/css/contact.css');
     }
 
@@ -43,6 +43,7 @@ function enqueue_custom_styles() {
         wp_enqueue_style('product-page-styles', get_template_directory_uri() . '/css/shop.css');
     }
 
+
     // Enqueue WooCommerce cart page styles
     if (is_cart()) {
         wp_enqueue_style('cart-page-styles', get_template_directory_uri() . '/css/cart.css');
@@ -51,6 +52,10 @@ function enqueue_custom_styles() {
     // Enqueue WooCommerce checkout page styles
     if (is_page('checkout')) {
         wp_enqueue_style('checkout-page-styles', get_template_directory_uri() . '/css/checkout.css');
+    }
+     // Enqueue WooCommerce order received (thank you) page styles
+     if (is_checkout() && get_query_var('order-received')) {
+        wp_enqueue_style('order-received-styles', get_template_directory_uri() . '/css/order-received.css');
     }
 
     // Enqueue terms, privacy, and copyright page styles

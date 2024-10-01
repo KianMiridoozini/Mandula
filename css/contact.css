@@ -1,0 +1,135 @@
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 2rem 0;
+  font-weight: var(--font-weight-semibold);
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+  margin: 1rem 0;
+}
+.contact-container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding: 0 5vw 0 5vw;
+}
+.contacts p{
+  font-size: 1.5rem;
+}
+.contact{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 1rem 0;
+    align-items: center;
+}
+.address{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.address a{
+  color: rgb(var(--almond-D));
+  text-decoration: none;
+  font-size: 2em;
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.social-media{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.contact-img {
+    width: calc(30% - 1rem);
+}
+.contact-img img{
+    aspect-ratio: 3/2;
+    border: 2px solid rgb(var(--almond-D));
+    border-radius: 10px;
+    float: right;
+}
+.contact-img img:hover{
+    box-shadow: 0 1px 10px 5px rgb(var(--almond));
+    
+}
+.icon img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.icon img:hover{
+    transform: scale(1.2);
+    box-shadow: 0 1px 10px 5px rgb(var(--almond));
+}
+
+.google-maps{
+  height: 500px;
+  border-top: 2px solid rgb(var(--almond-D));
+}
+
+@media screen and (max-width: 1180px) and (orientation: portrait), 
+       screen and (max-width: 1024px) {
+        h1 {
+          font-size: 4rem;
+          
+        }
+        h2 {
+          font-size: 2.5rem;
+          
+        }
+        .contact p{
+          font-size: 3rem;
+          margin: 0;
+          align-self: center;
+        }
+        .contact-container{
+          flex-direction: column-reverse;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .contacts{
+            width: 100%;
+            padding: 0;
+        }
+        .contact{
+            align-items: baseline;
+            place-content: space-between;
+            gap: 0;
+            margin-bottom: 2rem;
+        }
+        .contact-img{
+            width: 100%;
+        }
+        .contact-img img{
+            aspect-ratio: none;
+
+        }
+        .icon img{
+          height: 100px;
+          width: 100px;
+        }
+        .social-media{
+          align-self: center;
+          gap: 2rem;
+        }        
+
+
+}

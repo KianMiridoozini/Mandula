@@ -78,10 +78,10 @@ html{
     background-color: var(--sb-thumb-color);
     border-radius: 2px;
   }
+
 body {
     width: 100%;
     background-color: rgb(var(--almond),0.4) !important;
-    /*font-family: 'Roboto', sans-serif; */
     font-size: 100%;
     line-height: 1.5;
     margin: 0;
@@ -98,6 +98,31 @@ body {
 /* Universal Hero Section Styles */
 /* Container for the hero section */
 /* Universal Hero Section Styles */
+img{
+  max-width: 100% !important;
+  margin: auto !important;
+}
+h1{
+    font-family: var(--font-primary) !important;
+}
+h2{
+    font-family: var(--font-primary) !important;
+}
+h3{
+    font-family: var(--font-secondary) !important;
+}
+span{
+    font-family: var(--font-primary) !important;
+}
+label{
+    font-family: var(--font-primary) !important;
+}
+th{
+    font-family: var(--font-primary) !important;
+}
+address{
+    font-family: var(--font-secondary) !important;
+}
 .hero {
   position: relative;
   width: 100%;
@@ -142,8 +167,8 @@ body {
   margin-top: 50px; /* Spacing between title and headline */
 }
 
-/* Next and previous button styling */
-.prev, .next {
+/* front-page-next and front-page-previous button styling */
+.front-page-prev, .front-page-next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -158,11 +183,11 @@ body {
   z-index: 2;
 }
 
-.next {
+.front-page-next {
   right: 0;
 }
 
-.prev:hover, .next:hover {
+.front-page-prev:hover, .front-page-next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -204,7 +229,7 @@ body {
 }
 
 /* Responsive font sizes and adjustments for different screen sizes */
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 1180px) and (orientation: portrait) {
   .hero {
     height: 60vh; /* Reduce height for smaller screens */
   }
@@ -216,8 +241,10 @@ body {
   }
 
   .hero-headline {
-    font-size: calc(0.9rem + 0.8vw); /* Adjust headline size */
+    font-size: calc(1rem + 1vw); /* Adjust headline size */
     top: 55%; /* Adjusted position for smaller screens */
+    margin-top: 0;
+
   }
 }
 
@@ -238,6 +265,8 @@ body {
     font-size: calc(0.8rem + 1vw); /* Further adjust headline size */
     top: 45%; /* Move the headline slightly lower on mobile */
     padding: 0 10vw;
+    margin-top: 50px;
+
   }
 }
 
@@ -247,11 +276,14 @@ button{
     font-weight: var(--font-weight-semibold) !important;
 }
 
-.woocommerce img, .woocommerce-page img {
+/* =======================================================
+   Rescue Nav Logo
+======================================================= */
+/* .woocommerce img, .woocommerce-page img {
     height: 3rem;
     width: 100%;
-    object-fit: contain; /* Ensure images maintain aspect ratio */
-}
+    object-fit: contain; 
+} */
 
 a{
 font-family: var(--font-primary);

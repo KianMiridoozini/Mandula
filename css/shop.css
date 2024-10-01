@@ -2,6 +2,32 @@
    General Styles
 ======================================================= */
 
+.shop-hero {
+    /* height: 70vh !important; */
+}
+.shop-hero img {
+    height: 40vh !important;
+    object-fit: cover;
+}
+.woocommerce img, .woocommerce-page img {
+    max-width: 100%;
+}
+.shop-hero h3{
+    background-color: rgba(var(--light-pink-D));
+    color: rgb(var(--light-pink));
+    padding: 2% 10%;
+    box-shadow: 0 10px 10px rgba(var(--black), 0.5);
+    z-index: 1000;
+    text-align: left ;
+    font-weight: var(--font-weight-bold) !important;
+    text-align: center;
+    margin-top: 1vw !important;
+
+}
+
+
+
+
 /* Headings styling */
 .woocommerce-breadcrumb {
     font-family: var(--font-primary) !important;
@@ -46,17 +72,8 @@ h4 {
     font-size: 1.2vw !important;
 }
 
-/* =======================================================
-   Rescue Nav Logo
-======================================================= */
 
-/* Style for WooCommerce images */
-.woocommerce img, 
-.woocommerce-page img {
-    height: 3rem;
-    width: 100%;
-    object-fit: contain; /* Ensure images maintain aspect ratio */
-}
+
 
 /* =======================================================
    Shop Page Layout
@@ -215,7 +232,7 @@ li.awf-filter-container {
 
 /* Radio button label styling */
 .awf-filter-container input[type='radio'] + label {
-    font-family: var(--font-secondary);
+    font-family: var(--font-secondary) !important;
     font-weight: var(--font-weight-bold);
     text-align: center;
     justify-content: center;
@@ -461,6 +478,10 @@ li.awf-filter-container {
 }
 
 @media screen and (max-width: 480px) {
+    .shop-hero h3{
+        font-size: calc(1rem + 1vw) !important;
+        padding: 2% 5% !important;
+    }
     .woocommerce-breadcrumb {
         font-size: 1em !important;
     }
@@ -520,7 +541,7 @@ li.awf-filter-container {
     }
 
     .product span bdi {
-        font-size: 0.8em;
+        font-size: 0.7em;
         display: flex;
         font-weight: 700;
     }
@@ -548,5 +569,8 @@ li.awf-filter-container {
 
     .awf-form-submit-btn {
         font-size: 1.5em !important;
+    }
+    .awf-ac-products-container h2{
+        font-size: 0.6em !important;
     }
 }

@@ -1,0 +1,27 @@
+.woocommerce-order{
+    background-color: rgb(var(--white)) !important;
+    padding: 20px !important;
+    border-radius: 5px !important;
+    border: 1px solid rgb(var(--black)) !important;
+}
+.woocommerce-notice{
+    font-size: 42px !important;
+    text-align: center;
+    color: rgb(var(--green-B));
+    font-family: var(--font-weight-semibold) !important;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1180px) and (orientation: portrait){
+
+}
+
+@media screen and (max-width: 650px){
+    .woocommerce-notice{
+        font-size: 28px !important;
+        text-align: center;
+        color: rgb(var(--green-B));
+        font-family: var(--font-weight-semibold) !important;
+        text-decoration: underline;
+
+}}

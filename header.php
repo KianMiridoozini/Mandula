@@ -17,7 +17,7 @@
                 <img class="header-nav-logo" src="<?php echo get_template_directory_uri(); ?>/assets/logo/Almond.svg" alt="Logo">
             </a>
             <!-- Hamburger Icon -->
-            <div class="header-hamburger" onclick="toggleMenu()">
+            <div class="header-hamburger flex-col" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -92,7 +92,8 @@
         justify-content: space-between;
         align-items: center;
         height: 100%;
-        width: 72vw;
+        min-width: 80%;
+        max-width: 90%px;
         overflow: hidden; /* Ensure the list doesn't overflow */
         list-style: none;
     }
@@ -103,7 +104,7 @@
     }
 
     .header-nav-logo {
-        height: 3rem;
+        height: 3rem !important;
         vertical-align: middle;
     }
 
@@ -159,6 +160,13 @@
     }
 
     /* Responsive styles */
+    @media screen and (max-width: 1180px) and (orientation: portrait){
+        
+        a{
+            font-size: calc(1rem + 1vw)  !important;
+        }
+    }
+
     @media (max-width: 800px) {
         .header-nav {
             justify-content: space-between;

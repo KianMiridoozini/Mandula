@@ -1,14 +1,17 @@
 <?php
 defined('ABSPATH') || exit;
 
-get_header('shop'); ?>
+get_header('shop'); 
+$shop_page_id = wc_get_page_id('shop');
+$shop_image = get_field('shop_img' , $shop_page_id);
+$shop_text = get_field('shop_txt' , $shop_page_id);
 
-<section>
-    <div class="shop-img">
-        <img src="" alt="Shop Banner">
+?>
+<section class="shop-main">
+<section class="shop-hero">
+        <!-- <img class="shop-img" src="<?php echo esc_url($shop_image['url']) ?>" alt="Shop Image" style="width:100%"> -->
+        <h3><?php echo esc_html( $shop_text ) ?></h3>
     </div>
-    <div class="shop-text">
-        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, nobis. Non tenetur dolor ducimus sed molestias blanditiis omnis voluptate nostrum architecto eius ut et quaerat dolorum recusandae, incidunt, illum nisi.</h3>
 </section>
 
 <div class="shop-page-container">
@@ -80,7 +83,7 @@ get_header('shop'); ?>
         ?>
     </main>
 </div>
-
+</section>
 <?php get_footer('shop'); ?>
 
 <script>
@@ -95,4 +98,5 @@ get_header('shop'); ?>
         }
     });
 })(jQuery);
+
 </script>
