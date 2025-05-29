@@ -88,6 +88,8 @@ select {
     margin: 0 auto;
     max-width: 650px !important;
     height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
 .woocommerce-product-gallery {
@@ -199,6 +201,11 @@ main img {
     color: rgb(var(--white)) !important;
 }
 
+.woocommerce-Tabs-panel--description{
+    background-color: rgba(0, 0, 0, 0.025);
+    padding: 1px 10px 5px 10px !important;
+
+}
 @media screen and (max-width: 1180px) and (orientation: portrait) {
     .woocommerce-breadcrumb {
         margin-left: 0 !important;

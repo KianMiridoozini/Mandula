@@ -85,17 +85,18 @@ a {
 @media screen and (max-width: 1180px) and (orientation: portrait), 
        screen and (max-width: 1024px) {
     h2{
-        font-size: calc(1em + 2vw) !important;
+        font-size: calc(0.8em + 2vw) !important;
     }
     p{
-        font-size: calc(1em + 1vw) !important;
+        font-size: calc(0.7em + 1vw) !important;
     }
     span{
-        font-size: calc(16px + 1vw) !important;
+        font-size: calc(14px + 1vw) !important;
     }
     input{
         min-height: fit-content !important;
     }
+
     /* textarea{
         height: calc(90px - 1vw) !important;
         font-size: calc(1em + 1vw) !important;
@@ -136,6 +137,14 @@ a {
     }
     .wc-block-components-sidebar{
         width: 100% !important;
+    }
+    .wc-block-checkout__actions_row {
+        flex-direction: column-reverse !important;
+        gap: 1rem !important;
+    }
+    .wc-block-components-order-summary-item__image img{
+        max-width: none !important;
+
     }
 }
 /* @media screen and (max-width: 900px) {

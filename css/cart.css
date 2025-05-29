@@ -2,6 +2,9 @@
     margin: 2vw 2vw
 }
 
+.wc-block-components-totals-item__description{
+    display: none !important;
+}
 a {
     color: rgb(var(--black));
     text-decoration: none;
@@ -28,6 +31,7 @@ a {
 }
 .wc-block-cart-items__row img{
     height: 6rem !important;
+    aspect-ratio: 1/1 !important;
 }
 .wc-block-cart-item__remove-link{
     font-weight: var(--font-weight-semibold) !important;
@@ -46,9 +50,9 @@ a {
     max-height: fit-content;
     width: 45% !important;
 }
-.wc-block-components-totals-shipping__change-address__link{
+/* .wc-block-components-totals-shipping__change-address__link{
     display:none !important;
-}
+} */
 .wc-block-components-button{
     font-size: 14px;
     background-color: rgb(var(--green-B));

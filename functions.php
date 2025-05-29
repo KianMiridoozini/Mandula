@@ -42,6 +42,11 @@ function enqueue_custom_styles() {
     if (is_product_tag()) {
         wp_enqueue_style('product-page-styles', get_template_directory_uri() . '/css/shop.css');
     }
+    if (is_product_taxonomy()) {
+        wp_enqueue_style('product-page-styles', get_template_directory_uri() . '/css/shop.css');
+    }
+
+
 
 
     // Enqueue WooCommerce cart page styles
@@ -120,4 +125,45 @@ function custom_theme_enqueue_woocommerce_cart_fragments() {
 add_action('wp_enqueue_scripts', 'custom_theme_enqueue_woocommerce_cart_fragments',100);
 
  
+add_filter('loop_shop_per_page', 'custom_products_per_page', 20);
+
+function custom_products_per_page($cols) {
+    // Set the number of products per page
+    $cols = 9; // Replace 12 with your desired number of products per page
+    return $cols;
+}
+
+add_action('woocommerce_cart_calculate_fees', 'add_box_fee_per_product_dynamic', 20);
+
+function add_box_fee_per_product_dynamic($cart) {
+    if (is_admin() && !defined('DOING_AJAX')) {
+        return;
+    }
+
+    // Define the box fee per product
+    $box_fee = 500; // Fee in HUF
+    $total_box_fee = 0;
+
+    // Loop through cart items and calculate total fee
+    foreach ($cart->get_cart() as $cart_item) {
+        $quantity = $cart_item['quantity'];
+        $total_box_fee += $box_fee * $quantity; // Fee per product quantity
+    }
+
+    // Add the fee to the cart dynamically
+    if ($total_box_fee > 0) {
+        $cart->add_fee(__('Doboz díj:', 'your-textdomain'), $total_box_fee);
+    }
+}
+
+function remove_shipping_options_from_cart($show_shipping) {
+    if (is_cart()) {
+        return false;
+    }
+    return $show_shipping;
+}
+
+
+
+
 ?>

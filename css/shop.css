@@ -15,8 +15,8 @@
 .shop-hero h3{
     background-color: rgba(var(--light-pink-D));
     color: rgb(var(--light-pink));
-    padding: 2% 10%;
-    box-shadow: 0 10px 10px rgba(var(--black), 0.5);
+    padding: 1rem;
+    box-shadow: 0 5px 10px rgba(var(--light-pink-D), 0.5);
     z-index: 1000;
     text-align: left ;
     font-weight: var(--font-weight-bold) !important;
@@ -131,6 +131,11 @@ label {
 /* =======================================================
    Product Cards
 ======================================================= */
+.shop-products{
+    width: 100%;
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
 
 /* Product grid layout */
 .woocommerce ul.products {
@@ -349,6 +354,7 @@ li.awf-filter-container {
         overflow: hidden;
         text-overflow: ellipsis;
         padding: 0 0 0.5em 0 !important;
+        padding-top: 0.5em !important;
     }
 
     main .product {
@@ -364,7 +370,7 @@ li.awf-filter-container {
     }
 
     .woocommerce ul.products li.product a h2 {
-        font-size: 2em !important;
+        font-size: 1.4em !important;
     }
 
     .woocommerce ul.products li.product .button {
@@ -480,7 +486,6 @@ li.awf-filter-container {
 @media screen and (max-width: 480px) {
     .shop-hero h3{
         font-size: calc(1rem + 1vw) !important;
-        padding: 2% 5% !important;
     }
     .woocommerce-breadcrumb {
         font-size: 1em !important;
